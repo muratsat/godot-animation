@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://m76cnqc36mwq"]
+[gd_scene load_steps=15 format=3 uid="uid://m76cnqc36mwq"]
 
 [ext_resource type="Texture2D" uid="uid://dbwde3n4olnu7" path="res://hair_back.png" id="1_f4utr"]
 [ext_resource type="Script" path="res://AnimationPlayer.gd" id="1_j0j4y"]
+[ext_resource type="Shader" path="res://node_2d.gdshader" id="2_bfarl"]
 [ext_resource type="Texture2D" uid="uid://bb71mhmdlyw44" path="res://face.png" id="2_urn2a"]
 [ext_resource type="Texture2D" uid="uid://dpkomlk6otdcl" path="res://hair_front.png" id="3_id4qa"]
+[ext_resource type="PackedScene" uid="uid://7e3pfooyqiox" path="res://snow.tscn" id="6_j68bd"]
 
 [sub_resource type="Animation" id="Animation_et2of"]
 length = 0.001
@@ -516,6 +518,10 @@ gradient = SubResource("Gradient_m2gl4")
 fill_from = Vector2(0.527523, 1)
 fill_to = Vector2(0.770642, 0)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8kkp"]
+resource_local_to_scene = true
+shader = ExtResource("2_bfarl")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -528,13 +534,19 @@ libraries = {
 script = ExtResource("1_j0j4y")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -328.0
-offset_top = -170.0
-offset_right = 1192.0
-offset_bottom = 945.0
+offset_left = -941.0
+offset_top = -602.0
+offset_right = 1633.0
+offset_bottom = 1031.0
 texture = SubResource("GradientTexture2D_jmnkl")
 
+[node name="snow" parent="." instance=ExtResource("6_j68bd")]
+position = Vector2(1122, 470)
+amount = 12
+
 [node name="Node2D" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_w8kkp")
+position = Vector2(6, 129)
 
 [node name="hair_back" type="Polygon2D" parent="Node2D"]
 texture = ExtResource("1_f4utr")
@@ -547,8 +559,8 @@ internal_vertex_count = 4
 
 [node name="face" type="Polygon2D" parent="Node2D"]
 texture = ExtResource("2_urn2a")
-polygon = PackedVector2Array(343.443, 500, 239.344, 372.951, 227.869, 159.016, 363.934, 59.8361, 536.885, 84.4262, 594.262, 229.508, 550.82, 401.639, 591.803, 476.229, 700.82, 572.951, 679.508, 772.951, 241.803, 780.328, 233.607, 698.361, 340.984, 610.656)
-uv = PackedVector2Array(343.443, 500, 239.344, 372.951, 227.869, 159.016, 363.934, 59.8361, 536.885, 84.4262, 594.262, 229.508, 550.82, 401.639, 591.803, 476.229, 700.82, 572.951, 679.508, 772.951, 241.803, 780.328, 233.607, 698.361, 340.984, 610.656)
+polygon = PackedVector2Array(391, 79, 291, 112, 250, 178, 249, 270, 262, 343, 272, 391, 307, 435, 341, 471, 380, 465, 395, 500, 359, 532, 368, 597, 360, 621, 303, 678, 254, 722, 252, 743, 659, 744, 661, 716, 660.112, 684.831, 658.989, 650, 653.371, 610.674, 645.506, 561.798, 632.584, 533.708, 613.483, 516.292, 589.326, 505.618, 566.292, 487.64, 546.067, 463.483, 529.214, 441.011, 517.416, 424.719, 506.18, 428.09, 517.978, 364.607, 551.124, 341.573, 569.663, 314.607, 567.416, 281.461, 557.303, 254.494, 564.045, 223.596, 557.303, 184.27, 543.82, 146.629, 521.91, 124.157, 487.079, 101.685, 451.124, 88.764)
+uv = PackedVector2Array(391, 79, 291, 112, 250, 178, 249, 270, 262, 343, 272, 391, 307, 435, 341, 471, 380, 465, 395, 500, 359, 532, 368, 597, 360, 621, 303, 678, 254, 722, 252, 743, 659, 744, 661, 716, 660.112, 684.831, 658.989, 650, 653.371, 610.674, 645.506, 561.798, 632.584, 533.708, 613.483, 516.292, 589.326, 505.618, 566.292, 487.64, 546.067, 463.483, 529.214, 441.011, 517.416, 424.719, 506.18, 428.09, 517.978, 364.607, 551.124, 341.573, 569.663, 314.607, 567.416, 281.461, 557.303, 254.494, 564.045, 223.596, 557.303, 184.27, 543.82, 146.629, 521.91, 124.157, 487.079, 101.685, 451.124, 88.764)
 
 [node name="hair_front" type="Polygon2D" parent="Node2D"]
 texture = ExtResource("3_id4qa")
