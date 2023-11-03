@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=3 uid="uid://m76cnqc36mwq"]
 
 [ext_resource type="Texture2D" uid="uid://dbwde3n4olnu7" path="res://hair_back.png" id="1_f4utr"]
-[ext_resource type="Script" path="res://AnimationPlayer.gd" id="1_j0j4y"]
 [ext_resource type="Shader" path="res://node_2d.gdshader" id="2_bfarl"]
 [ext_resource type="Texture2D" uid="uid://bb71mhmdlyw44" path="res://face.png" id="2_urn2a"]
 [ext_resource type="Texture2D" uid="uid://dpkomlk6otdcl" path="res://hair_front.png" id="3_id4qa"]
+[ext_resource type="PackedScene" uid="uid://doy5uil3gefer" path="res://anger.tscn" id="6_dtyon"]
 [ext_resource type="PackedScene" uid="uid://7e3pfooyqiox" path="res://snow.tscn" id="6_j68bd"]
 
 [sub_resource type="Animation" id="Animation_et2of"]
@@ -531,7 +531,6 @@ speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_n5q3c")
 }
-script = ExtResource("1_j0j4y")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -941.0
@@ -570,6 +569,9 @@ uv = PackedVector2Array(730.612, 484.354, 681.633, 373.469, 650.34, 293.197, 644
 polygons = [PackedInt32Array(44, 48, 9), PackedInt32Array(44, 8, 9), PackedInt32Array(10, 48, 9), PackedInt32Array(48, 10, 11), PackedInt32Array(48, 12, 11), PackedInt32Array(48, 12, 13), PackedInt32Array(48, 14, 13), PackedInt32Array(44, 14, 48), PackedInt32Array(44, 15, 14), PackedInt32Array(44, 43, 15), PackedInt32Array(47, 44, 8), PackedInt32Array(43, 16, 15), PackedInt32Array(16, 45, 43), PackedInt32Array(17, 16, 45), PackedInt32Array(17, 46, 45), PackedInt32Array(17, 18, 46), PackedInt32Array(21, 20, 19), PackedInt32Array(18, 19, 21, 22, 23, 46), PackedInt32Array(7, 47, 8), PackedInt32Array(7, 24, 47), PackedInt32Array(47, 46, 45), PackedInt32Array(24, 46, 47), PackedInt32Array(24, 23, 46), PackedInt32Array(24, 6, 7), PackedInt32Array(5, 24, 6), PackedInt32Array(36, 37, 38, 39, 40, 41, 42, 0, 1, 2, 34, 35), PackedInt32Array(30, 29, 28, 33, 32, 31), PackedInt32Array(4, 24, 5), PackedInt32Array(33, 50, 34), PackedInt32Array(50, 2, 34), PackedInt32Array(50, 3, 2), PackedInt32Array(3, 49, 4), PackedInt32Array(24, 49, 4), PackedInt32Array(49, 50, 3), PackedInt32Array(24, 25, 26, 27, 28, 33, 50, 49), PackedInt32Array(47, 45, 43), PackedInt32Array(44, 47, 43)]
 bones = ["hair_back_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_back_left/hair_back_left_1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_back_left/hair_back_left_1/hair_back_left_2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_back_right", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_back_right/hair_back_right_1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_back_right/hair_back_right_1/hair_back_right_2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "hair_front", PackedFloat32Array(0, 0, 0, 0, 1, 1, 1, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0), "hair_front/hair_font_right", PackedFloat32Array(0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1), "hair_front/hair_font_right/hair_front_right_1", PackedFloat32Array(0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 1), "hair_front/hair_font_right/hair_front_right_1/hair_front_right_2", PackedFloat32Array(1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0), "hair_front/hair_front_left", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0), "hair_front/hair_front_left/bangs", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0.5, 1, 1, 0, 0, 0, 0), "hair_front/hair_front_left/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0.5, 1, 0, 0)]
 internal_vertex_count = 8
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("6_dtyon")]
+position = Vector2(397, 323)
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 visible = false

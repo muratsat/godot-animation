@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://doy5uil3gefer"]
+
+[ext_resource type="Texture2D" uid="uid://owwn155ksf53" path="res://pngfind.com-minecraft-heart-png-697698.png" id="1_alrs0"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ko7c5"]
+emission_shape = 3
+emission_box_extents = Vector3(100, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 60.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 300.0
+initial_velocity_max = 300.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.05
+scale_max = 0.05
+color = Color(1, 0.2, 0, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_ko7c5")
+texture = ExtResource("1_alrs0")
+one_shot = true
